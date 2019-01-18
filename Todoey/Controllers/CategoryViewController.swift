@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class CategoryViewController: SwipeTableViewController {
     
@@ -27,9 +28,13 @@ class CategoryViewController: SwipeTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        guard let category = categories?[indexPath.row] else { fatalError() }
+        guard let colour = UIColor(hexString: category.colour) else { fatalError() }
         
-        cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categories Added Yet!"
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        cell.textLabel?.text = category.name
+        cell.backgroundColor = colour
+        cell.textLabel?.textColor = ContrastColorOf(colour, returnFlat: true)
         
         return cell
     }
@@ -40,11 +45,10 @@ class CategoryViewController: SwipeTableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { fatalError() }
         let destinationVC = segue.destination as! TodoListViewController
         
-        if let indexPath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedCategory = categories?[indexPath.row]
-        }
+        destinationVC.selectedCategory = categories?[indexPath.row]
     }
     
     //MARK: Data Manipulation Methods
@@ -67,14 +71,14 @@ class CategoryViewController: SwipeTableViewController {
     
     //MARK: Delete Data From Swipe
     override func updateModel(at indexPath: IndexPath) {
-        if let categoryForDeletion = self.categories?[indexPath.row]{
-            do {
-                try self.realm.write {
-                    self.realm.delete(categoryForDeletion)
-                }
-            } catch {
-                print("Error deleting category, \(error)")
+        guard let categoryForDeletion = self.categories?[indexPath.row] else { fatalError() }
+        
+        do {
+            try self.realm.write {
+                self.realm.delete(categoryForDeletion)
             }
+        } catch {
+            print("Error deleting category, \(error)")
         }
     }
     
@@ -86,6 +90,7 @@ class CategoryViewController: SwipeTableViewController {
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
             let newCategory = Category()
             newCategory.name = textField.text!
+            newCategory.colour = UIColor.randomFlat.hexValue()
             
             self.save(category: newCategory)
         }
