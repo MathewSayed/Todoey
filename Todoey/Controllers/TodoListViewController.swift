@@ -124,6 +124,8 @@ class TodoListViewController: SwipeTableViewController {
         
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new item"
+            alertTextField.addPunctuationToKeyboard()
+            
             textField = alertTextField
         }
         

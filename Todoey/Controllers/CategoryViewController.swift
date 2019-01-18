@@ -97,6 +97,8 @@ class CategoryViewController: SwipeTableViewController {
         
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Add a new category"
+            alertTextField.addPunctuationToKeyboard()
+            
             textField = alertTextField
         }
         

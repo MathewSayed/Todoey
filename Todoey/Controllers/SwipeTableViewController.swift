@@ -46,7 +46,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         return options
     }
     
-    func updateModel(at indexPath: IndexPath){
+    func updateModel(at indexPath: IndexPath) {
         // Update data model
     }
 

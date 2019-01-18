@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1E82C121F1DE3A00D99DB1 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E82C021F1DE3A00D99DB1 /* UITextField.swift */; };
+		BF1E82C521F1E19300D99DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF1E82C421F1E19300D99DB1 /* Assets.xcassets */; };
 		BF55076721F00EF400EBC27A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55076621F00EF400EBC27A /* Item.swift */; };
 		BF55076921F00F4200EBC27A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55076821F00F4200EBC27A /* Category.swift */; };
 		BF55076B21F0610100EBC27A /* delete-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF55076A21F0610100EBC27A /* delete-icon.png */; };
@@ -14,7 +16,6 @@
 		BFD37C6021DC3D630016CA8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD37C5F21DC3D630016CA8A /* AppDelegate.swift */; };
 		BFD37C6221DC3D630016CA8A /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD37C6121DC3D630016CA8A /* TodoListViewController.swift */; };
 		BFD37C6521DC3D630016CA8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD37C6321DC3D630016CA8A /* Main.storyboard */; };
-		BFD37C6721DC3D660016CA8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD37C6621DC3D660016CA8A /* Assets.xcassets */; };
 		BFD37C6A21DC3D660016CA8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD37C6821DC3D660016CA8A /* LaunchScreen.storyboard */; };
 		BFFC139421DF1E0100F434EC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC139321DF1E0100F434EC /* CategoryViewController.swift */; };
 		F216D7733033F0944E6E911D /* Pods_Todoey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA17AD6DC53AECE69BA5CF7D /* Pods_Todoey.framework */; };
@@ -22,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		76544C235DEBEC5C3F08F1D6 /* Pods-Todoey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Todoey/Pods-Todoey.release.xcconfig"; sourceTree = "<group>"; };
+		BF1E82C021F1DE3A00D99DB1 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		BF1E82C421F1E19300D99DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF55076621F00EF400EBC27A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BF55076821F00F4200EBC27A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BF55076A21F0610100EBC27A /* delete-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-icon.png"; sourceTree = "<group>"; };
@@ -30,7 +33,6 @@
 		BFD37C5F21DC3D630016CA8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD37C6121DC3D630016CA8A /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		BFD37C6421DC3D630016CA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BFD37C6621DC3D660016CA8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD37C6921DC3D660016CA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD37C6B21DC3D660016CA8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFFC139321DF1E0100F434EC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BF1E82BF21F1DE1E00D99DB1 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				BF1E82C021F1DE3A00D99DB1 /* UITextField.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		BFB72B7C21DD93A30047A937 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +107,7 @@
 		BFB72B7F21DD940E0047A937 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BFD37C6621DC3D660016CA8A /* Assets.xcassets */,
+				BF1E82C421F1E19300D99DB1 /* Assets.xcassets */,
 				BF55076A21F0610100EBC27A /* delete-icon.png */,
 				BFD37C6821DC3D660016CA8A /* LaunchScreen.storyboard */,
 			);
@@ -125,6 +135,7 @@
 		BFD37C5E21DC3D630016CA8A /* Todoey */ = {
 			isa = PBXGroup;
 			children = (
+				BF1E82BF21F1DE1E00D99DB1 /* Extentions */,
 				BFD37C5F21DC3D630016CA8A /* AppDelegate.swift */,
 				BFB72B7D21DD93C50047A937 /* Controllers */,
 				BFB72B7C21DD93A30047A937 /* Data Model */,
@@ -196,8 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD37C6A21DC3D660016CA8A /* LaunchScreen.storyboard in Resources */,
-				BFD37C6721DC3D660016CA8A /* Assets.xcassets in Resources */,
 				BFD37C6521DC3D630016CA8A /* Main.storyboard in Resources */,
+				BF1E82C521F1E19300D99DB1 /* Assets.xcassets in Resources */,
 				BF55076B21F0610100EBC27A /* delete-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +275,7 @@
 			files = (
 				BF55076721F00EF400EBC27A /* Item.swift in Sources */,
 				BFFC139421DF1E0100F434EC /* CategoryViewController.swift in Sources */,
+				BF1E82C121F1DE3A00D99DB1 /* UITextField.swift in Sources */,
 				BFD37C6221DC3D630016CA8A /* TodoListViewController.swift in Sources */,
 				BFD37C6021DC3D630016CA8A /* AppDelegate.swift in Sources */,
 				BF55076D21F14AA300EBC27A /* SwipeTableViewController.swift in Sources */,
